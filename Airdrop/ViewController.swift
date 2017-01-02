@@ -40,6 +40,7 @@ class ViewController: UIViewController {
         self.present(imagePicker, animated: true, completion: nil) // 5
     }
     
+    
     @IBAction func galButtonTapped(_ sender: UIButton) {
 
         let imagePicker = UIImagePickerController() // 1
@@ -48,11 +49,14 @@ class ViewController: UIViewController {
         
     }
  
+    
+    
     @IBAction func sendButtonTapped(_ sender: UIButton) {
         let activityItems = [pictureView.image!]
         let activityController = UIActivityViewController(activityItems: activityItems, applicationActivities: nil)
         self.present(activityController, animated: true, completion: nil)
     }
+
 
     
     private func configureButton(btn: UIButton) {
@@ -67,6 +71,8 @@ class ViewController: UIViewController {
         btn.layer.shadowRadius = 2
     }
 }
+
+
 
 
 extension ViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
